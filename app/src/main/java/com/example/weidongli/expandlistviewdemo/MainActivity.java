@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    //创建数组以及 二维数组
     public String[] groupData = {"第一组", "第二组", "第三组", "第四组"};
 
     public String[][] childData = {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //找控件
         expandableListView = (ExpandableListView) findViewById(R.id.expand_list);
         adapter = new MyAdapter(MainActivity.this, groupData, childData);
         expandableListView.setAdapter(adapter);
